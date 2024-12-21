@@ -27,7 +27,7 @@ const polaroids = [
   {
     caption: "Happy Birthday Meri Jaan",
     imagePos: { x: 0, y: 70 },
-    imagePath: "/img/jaanunjaani.jpg",
+    imagePath: "img/jaanunjaani.jpg",
   },
   {
     caption: "Happy Birthday",
@@ -47,7 +47,7 @@ const polaroids = [
   {
     caption: "Happy Birthday",
     imagePos: { x: 0, y: 10 },
-    imagePath: "/img/eimaan3.jpg",
+    imagePath: "img/eimaan3.jpg",
   },
   {
     caption: "Happy Birthday",
@@ -57,7 +57,7 @@ const polaroids = [
   {
     caption: "Happy birthday!! Ily and you mean so much to me Abeer 🫶🏼💜",
     imagePos: { x: 0, y: 0 },
-    imagePath: "/img/eimaan1.jpg",
+    imagePath: "img/eimaan1.jpg",
   },
   {
     caption: "Beach Day",
