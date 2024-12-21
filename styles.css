@@ -290,3 +290,41 @@ body {
   text-align: center;
   word-wrap: break-word;
 }
+#video-container {
+  position: relative;
+  height: 100%;
+  max-width: 60vw; /* Limit width to 60% of the viewport width */
+  max-height: 60vh; /* Limit height to 60% of the viewport height */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure no content overflows the container */
+}
+
+#video-player {
+  max-height: 100%; /* Prevent the video from exceeding the container's height */
+  object-fit: contain; /* Keep the video's aspect ratio intact */
+}
+
+/* Adjust modal content for video */
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Ensure navigation buttons don't overlap with video */
+.modal .nav-button {
+  z-index: 2001;
+}
+
+/* Adjust close button position for video modal */
+.modal .close-button {
+  color: white;
+  z-index: 2001;
+}
