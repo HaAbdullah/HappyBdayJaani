@@ -62,7 +62,7 @@ const polaroids = [
   {
     caption: "Beach Day",
     imagePos: { x: 0, y: -10 },
-    imagePath: "/path/to/your/image2.jpg",
+    imagePath: "img/eimaan2.jpg",
   },
   {
     caption: "Neeeenja 🥷🏼",
