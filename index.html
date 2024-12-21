@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="overlay-content">
-      <h1 class="title">Happy Birthday Abeer</h1>
+      <h1 class="title">Happy Birthday Jaani!</h1>
       <div class="play-button" onclick="openModal()">
         <svg viewBox="0 0 24 24">
           <path d="M8 5v14l11-7z" />
@@ -28,9 +28,21 @@
     <div class="modal">
       <div class="modal-content">
         <span class="close-button" onclick="closeModal()">×</span>
-        <video id="video-player" width="100%" controls>
-          <source src="/api/placeholder/400/320" type="video/mp4" />
-        </video>
+        <!-- Video container -->
+        <div id="video-container" style="display: none">
+          <video id="video-player" width="100%" controls>
+            <source src="/api/placeholder/400/320" type="video/mp4" />
+          </video>
+        </div>
+        <!-- Image container -->
+        <div id="image-container" style="display: none">
+          <div class="modal-polaroid">
+            <div class="modal-image-container">
+              <img id="modal-image" src="" alt="Polaroid" />
+            </div>
+            <div id="modal-caption" class="caption"></div>
+          </div>
+        </div>
         <button class="nav-button prev-button">←</button>
         <button class="nav-button next-button">→</button>
       </div>

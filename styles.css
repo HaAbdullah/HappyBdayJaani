@@ -93,20 +93,91 @@ body {
   transform: scale(1.15) rotate(0deg) !important;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 100;
+  cursor: pointer;
+}
+.polaroid {
+  background: white;
+  padding: 10px 10px 25px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 20vw;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1;
+  margin: 0;
+  margin-top: -25px;
 }
 
+/* Fixed aspect ratio container for images */
 .image-container {
   width: 100%;
   height: calc(20vw - 20px);
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Base image styles that maintain aspect ratio within container */
 .polaroid img {
-  width: 120%;
-  height: 120%;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Changed from cover to contain */
   position: absolute;
+}
+
+/* Individual image positioning classes */
+.img1 {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.img2 {
+  width: 75% !important;
+  height: auto !important;
+  position: relative !important;
+}
+.img3 {
+  width: 75% !important;
+  height: auto !important;
+  position: relative !important;
+}
+.img4 {
+  width: 75% !important;
+  height: auto !important;
+  position: relative !important;
+}
+.img5 {
+  width: 100% !important;
+  height: 120% !important;
+  position: relative !important;
+}
+.img2 {
+  width: 75% !important;
+  height: auto !important;
+  position: relative !important;
+}
+.img2 {
+  width: 75% !important;
+  height: auto !important;
+  position: relative !important;
+}
+.img2 {
+  width: 75% !important;
+  height: auto !important;
+  position: relative !important;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.img2 {
+  width: 75% !important;
+  height: auto !important;
+  position: relative !important;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .polaroid .caption {
@@ -155,14 +226,6 @@ body {
   z-index: 2000;
 }
 
-.modal-content {
-  background: white;
-  padding: 20px 20px 60px 20px;
-  position: relative;
-  width: 80%;
-  max-width: 800px;
-}
-
 .close-button {
   position: absolute;
   right: 20px;
@@ -187,4 +250,43 @@ body {
 
 .next-button {
   right: 20px;
+}
+.modal-content {
+  position: relative;
+  max-width: 60vw; /* 60% of viewport width */
+  max-height: 60vh; /* 60% of viewport height */
+  margin: auto;
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+}
+
+.modal-polaroid {
+  background: white;
+  padding: 20px 20px 50px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* Allow polaroid to shrink to content */
+  max-width: 100%; /* Respect parent max-width */
+}
+
+.modal-image-container {
+  position: relative;
+  max-width: 100%;
+  max-height: calc(60vh - 90px); /* Account for padding and caption */
+  display: flex;
+  justify-content: center;
+}
+
+.modal-image-container img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(60vh - 90px);
+  width: auto; /* Allow natural width */
+  height: auto; /* Allow natural height */
+  object-fit: contain;
+}
+
+#modal-caption {
+  margin-top: 15px;
+  text-align: center;
+  word-wrap: break-word;
 }
