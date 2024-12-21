@@ -100,7 +100,7 @@ let isVideoModal = true;
 
 // Video sources
 const videos = [
-  "/vid/eimaan.mp4",
+  "vid/eimaan.mp4",
   "/api/placeholder/400/320",
   "/api/placeholder/400/320",
 ];
