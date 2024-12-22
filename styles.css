@@ -270,6 +270,10 @@ body {
 .img10 {
   width: 500%;
 }
+
+.caption12 {
+  font-size: 13px !important;
+}
 .img13 {
   width: 110% !important;
 }
@@ -278,4 +282,226 @@ body {
 }
 .caption14 {
   font-size: 16px !important;
+}
+
+.caption16 {
+  font-size: 8px !important;
+}
+.img19 {
+  width: 500%;
+}
+@media screen and (max-width: 1180px) {
+  .title {
+    font-size: 3rem;
+  }
+  .img1 {
+    left: 0px !important;
+    top: 40px !important;
+    width: 100% !important;
+    height: 200% !important;
+  }
+  .img2 {
+    left: 0px !important;
+    top: 40px !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .img5 {
+    left: 0px !important;
+    top: 10px !important;
+    width: 100% !important;
+    height: 200% !important;
+  }
+  .img9 {
+    left: 0px !important;
+    top: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .img10 {
+    left: 0px !important;
+    top: 0px !important;
+    width: 100% !important;
+    height: 150% !important;
+  }
+  .img13 {
+    left: 0px !important;
+    top: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .polaroid {
+    width: 15vw;
+    height: 15vw;
+    margin: 8px;
+  }
+
+  .background-polaroid {
+    width: calc(25vw - 16px);
+  }
+
+  .background-color-box {
+    height: calc(25vw - 16px);
+  }
+
+  .gallery {
+    gap: 15px;
+  }
+
+  .modal-content {
+    max-width: 80vw;
+    max-height: 80vh;
+  }
+
+  .play-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .play-button svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  /* Hide background polaroids */
+  .background-gallery {
+    display: none;
+  }
+
+  /* Fixed header section */
+  .overlay-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(240, 240, 240, 0.9);
+    padding: 20px 0;
+    z-index: 1000;
+    transform: none;
+    backdrop-filter: blur(5px);
+  }
+
+  .title {
+    font-size: 2rem;
+    margin: 0 0 10px 0;
+  }
+
+  /* Main content layout */
+  .gallery-container {
+    height: auto;
+    margin-top: 160px; /* Space for fixed header */
+    overflow: visible;
+    padding: 20px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .polaroid {
+    width: 85vw;
+    height: 85vw;
+    margin: 0;
+    transform: none !important; /* Remove random rotations */
+  }
+
+  .polaroid:hover {
+    transform: scale(1.05) !important;
+  }
+
+  .caption {
+    font-size: 1.2rem;
+  }
+
+  /* Modal adjustments */
+  .modal-content {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+
+  .nav-button {
+    padding: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .prev-button {
+    left: 5px;
+  }
+
+  .next-button {
+    right: 5px;
+  }
+
+  #video-container {
+    max-width: 90vw;
+    max-height: 70vh;
+  }
+
+  .modal-polaroid {
+    padding: 10px 10px 30px 10px;
+  }
+
+  #modal-caption {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+}
+
+/* Small Mobile Phones Media Query */
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .gallery-container {
+    margin-top: 140px;
+    padding: 10px;
+  }
+
+  .polaroid {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .caption {
+    font-size: 1rem;
+  }
+}
+/* Handle landscape orientation */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .gallery-container {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+
+  .overlay-content {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    margin: 20px 0;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
 }

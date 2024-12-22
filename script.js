@@ -94,7 +94,7 @@ const polaroids = [
   // },
   {
     caption: "Happy birthday!! Ily and you mean so much to me Abeer 🫶🏼💜",
-    imagePos: { x: 1, y: 10 },
+    imagePos: { x: 1, y: 20 },
     imagePath: "img/eimaan1.jpg",
     zIndex: 4,
   },
@@ -151,12 +151,12 @@ const polaroids = [
   },
   {
     caption: "We all love you",
-    imagePos: { x: 0, y: 5 },
+    imagePos: { x: -5, y: 5 },
     imagePath: "img/group.jpg",
     zIndex: 1,
   },
   {
-    caption: "Beach Day",
+    caption: "",
     imagePos: { x: 0, y: 0 },
     imagePath: "img/anushka2.jpg",
     zIndex: 1,
@@ -213,6 +213,7 @@ const videos = [
   "vid/eimaan.mp4",
   "vid/khadija.mp4",
   "vid/kat.mp4",
+  "vid/anushka.mp4",
 
   "/api/placeholder/400/320",
 ];
