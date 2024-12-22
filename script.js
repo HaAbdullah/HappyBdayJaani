@@ -20,28 +20,31 @@ for (let i = 0; i < 50; i++) {
 }
 
 // Rotation angles for main polaroids
-const rotationAngles = [5, -3, 7, -5, 4, -6, 3, -4, 6, -2, 5, -7, 4, -3, 6];
+const rotationAngles = [
+  5, -3, 7, -5, 4, -6, 3, -4, 6, -2, 5, -7, 4, -3, 4, -5, -7, 4, -3, 3,
+];
 
 // Polaroid data
 const polaroids = [
   {
-    caption: "Happy Birthday Meri Jaan",
-    imagePos: { x: 0, y: 35 },
-    imagePath: "img/jaanunjaani.jpg",
+    caption: "My favourite Christmas tree",
+    imagePos: { x: 0, y: 38 },
+    imagePath: "img/abeer2.jpg",
     zIndex: 1,
   },
   {
     caption: "HAPPY BIRTHDAY ABEER",
-    imagePos: { x: 0, y: 35 },
+    imagePos: { x: 0, y: 37 },
     imagePath: "img/ananya.jpg",
     zIndex: 1,
   },
-  {
-    caption: "",
-    imagePos: { x: 0, y: -10 },
-    imagePath: "/",
-    zIndex: 1,
-  },
+  // {
+  //   caption:
+  //     "I miss your emo abeer phase (fr if you were a guy, I would have asked you out)",
+  //   imagePos: { x: 0, y: -10 },
+  //   imagePath: "img/abeer3.jpg",
+  //   zIndex: 1,
+  // },
   {
     caption: "Happy Birthday",
     imagePos: { x: -15, y: -10 },
@@ -49,45 +52,90 @@ const polaroids = [
     zIndex: 1,
   },
   {
-    caption: "Happy Birthday",
-    imagePos: { x: 0, y: 40 },
-    imagePath: "img/eimaan3.jpg",
+    caption: "WE LOVE YOU SO MUCH",
+    imagePos: { x: -15, y: -10 },
+    imagePath: "img/anushka4.jpg",
     zIndex: 1,
+  },
+  {
+    caption: "You were always planning and plotting something",
+    imagePos: { x: 0, y: 40 },
+    imagePath: "img/abeer1.jpg",
+    zIndex: 5,
+  },
+  {
+    caption: "Happy Birthday Meri Jaan",
+    imagePos: { x: 0, y: 0 },
+    imagePath: "img/jaanunjaani.jpg",
+    zIndex: 4,
   },
   {
     caption: "Happy Birthday",
     imagePos: { x: 0, y: -10 },
     imagePath: "img/eimaan2.jpg",
-    zIndex: 1,
+    zIndex: 4,
   },
   {
+    caption: "FUN FUN TIMES",
+    imagePos: { x: 5, y: -10 },
+    imagePath: "img/kat1.jpg",
+    zIndex: 3,
+  },
+  {
+    caption: "HAPPY BIRTHDAY ABEER",
+    imagePos: { x: 5, y: 20 },
+    imagePath: "img/ananya.jpg",
+  },
+  // {
+  //   caption: "Neeeenja 🥷🏼",
+  //   imagePos: { x: 0, y: -10 },
+  //   imagePath: "img/neeeeenjas.jpg",
+  //   zIndex: 1,
+  // },
+  {
     caption: "Happy birthday!! Ily and you mean so much to me Abeer 🫶🏼💜",
-    imagePos: { x: 0, y: 0 },
+    imagePos: { x: 1, y: 10 },
     imagePath: "img/eimaan1.jpg",
     zIndex: 4,
   },
   {
-    caption: "HAPPY BIRTHDAY ABEER",
-    imagePos: { x: 0, y: -10 },
-    imagePath: "img/khadija.jpg",
-  },
-  {
-    caption: "Neeeenja 🥷🏼",
-    imagePos: { x: 0, y: -10 },
-    imagePath: "img/neeeeenjas.jpg",
-    zIndex: 1,
-  },
-  {
-    caption: "Beach Day",
-    imagePos: { x: -15, y: -10 },
-    imagePath: "/path/to/your/image2.jpg",
-    zIndex: 1,
-  },
-  {
-    caption: "Beach Day",
+    caption: "FUN FUN TIMES",
     imagePos: { x: 5, y: -10 },
     imagePath: "img/kat1.jpg",
+    zIndex: 3,
+  },
+  {
+    caption:
+      "Through our Covid times in high school. We broke so many rules, but you are worth breaking each rule",
+    imagePos: { x: 0, y: -50 },
+    imagePath: "img/anushka3.jpg",
+    zIndex: 3,
+  },
+  {
+    caption:
+      "Abeer, I still remember our math grade 9 class where our friendship started, who knew that it would turn out to be for forever ♾️ ❤️",
+    imagePos: { x: 0, y: 20 },
+    imagePath: "img/anushka5.jpg",
+    zIndex: 5,
+  },
+  {
+    caption: "HAPPY BIRTHDAY ABEER",
+    imagePos: { x: 0, y: 0 },
+    imagePath: "img/khadija.jpg",
+    zIndex: 4,
+  },
+  {
+    caption: "Dusra Zamana",
+    imagePos: { x: 0, y: 0 },
+    imagePath: "img/abdullah3.jpg",
     zIndex: 1,
+  },
+  {
+    caption:
+      "You were my true partner in computer engineering and comp sci class, Mr.Knowles knew that we were trouble to the tech world- maybe still are. I love this picture and I miss you sooo much, I wish we got to be together again",
+    imagePos: { x: 0, y: 0 },
+    imagePath: "img/anushka1.jpg",
+    zIndex: 5,
   },
   {
     caption: "Beach Day",
@@ -102,49 +150,18 @@ const polaroids = [
     zIndex: 1,
   },
   {
-    caption: "Beach Day",
-    imagePos: { x: -15, y: -10 },
-    imagePath: "/path/to/your/image2.jpg",
+    caption: "We all love you",
+    imagePos: { x: 0, y: 5 },
+    imagePath: "img/group.jpg",
     zIndex: 1,
   },
   {
     caption: "Beach Day",
-    imagePos: { x: -15, y: -10 },
-    imagePath: "/path/to/your/image2.jpg",
-    zIndex: 1,
-  },
-  {
-    caption: "Beach Day",
-    imagePos: { x: -15, y: -10 },
-    imagePath: "/path/to/your/image2.jpg",
-    zIndex: 1,
-  },
-  {
-    caption: "Beach Day",
-    imagePos: { x: -15, y: -10 },
-    imagePath: "/path/to/your/image2.jpg",
-    zIndex: 1,
-  },
-  {
-    caption: "Beach Day",
-    imagePos: { x: -15, y: -10 },
-    imagePath: "/path/to/your/image2.jpg",
-    zIndex: 1,
-  },
-  {
-    caption: "Beach Day",
-    imagePos: { x: -15, y: -10 },
-    imagePath: "/path/to/your/image2.jpg",
-    zIndex: 1,
-  },
-  {
-    caption: "Beach Day",
-    imagePos: { x: -15, y: -10 },
-    imagePath: "/path/to/your/image2.jpg",
+    imagePos: { x: 0, y: 0 },
+    imagePath: "img/anushka2.jpg",
     zIndex: 1,
   },
 ];
-
 const gallery = document.querySelector(".gallery");
 polaroids.forEach((data, index) => {
   const polaroid = document.createElement("div");
@@ -169,7 +186,8 @@ polaroids.forEach((data, index) => {
   polaroid.addEventListener("click", () => openImageModal(index));
 
   const caption = document.createElement("div");
-  caption.className = "caption";
+  // Add both the general caption class and a unique caption class
+  caption.className = `caption caption${index + 1}`;
   caption.textContent = data.caption;
 
   imageContainer.appendChild(img);

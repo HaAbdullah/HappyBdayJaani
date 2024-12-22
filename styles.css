@@ -16,7 +16,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 100;
   text-align: center;
   pointer-events: none;
 }
@@ -96,7 +96,7 @@ body {
 .image-container {
   width: 100%;
   flex: 1;
-  height: 90%;
+  height: 88%;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -155,7 +155,7 @@ body {
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 200;
 }
 
 .close-button {
@@ -259,4 +259,23 @@ body {
 .modal .close-button {
   color: white;
   z-index: 10;
+}
+
+.caption6 {
+  font-size: 20px !important;
+}
+.img12 {
+  height: 150% !important;
+}
+.img10 {
+  width: 500%;
+}
+.img13 {
+  width: 110% !important;
+}
+.caption13 {
+  font-size: 13px !important;
+}
+.caption14 {
+  font-size: 16px !important;
 }
