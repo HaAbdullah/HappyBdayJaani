@@ -26,65 +26,157 @@ const rotationAngles = [5, -3, 7, -5, 4, -6, 3, -4, 6, -2, 5, -7, 4, -3, 6];
 const polaroids = [
   {
     caption: "Happy Birthday Meri Jaan",
-    imagePos: { x: 0, y: 70 },
+    imagePos: { x: 0, y: 35 },
     imagePath: "img/jaanunjaani.jpg",
+    zIndex: 1,
   },
   {
-    caption: "Happy Birthday",
-    imagePos: { x: 0, y: -10 },
-    imagePath: "",
+    caption: "HAPPY BIRTHDAY ABEER",
+    imagePos: { x: 0, y: 35 },
+    imagePath: "img/ananya.jpg",
+    zIndex: 1,
   },
   {
-    caption: "Happy Birthday",
+    caption: "",
     imagePos: { x: 0, y: -10 },
     imagePath: "/",
+    zIndex: 1,
   },
   {
     caption: "Happy Birthday",
     imagePos: { x: -15, y: -10 },
-    imagePath: "/",
+    imagePath: "",
+    zIndex: 1,
   },
   {
     caption: "Happy Birthday",
-    imagePos: { x: 0, y: 10 },
+    imagePos: { x: 0, y: 40 },
     imagePath: "img/eimaan3.jpg",
+    zIndex: 1,
   },
   {
     caption: "Happy Birthday",
     imagePos: { x: 0, y: -10 },
     imagePath: "img/eimaan2.jpg",
+    zIndex: 1,
   },
   {
     caption: "Happy birthday!! Ily and you mean so much to me Abeer 🫶🏼💜",
     imagePos: { x: 0, y: 0 },
     imagePath: "img/eimaan1.jpg",
+    zIndex: 4,
   },
   {
-    caption: "Beach Day",
+    caption: "HAPPY BIRTHDAY ABEER",
     imagePos: { x: 0, y: -10 },
-    imagePath: "img/eimaan2.jpg",
+    imagePath: "img/khadija.jpg",
   },
   {
     caption: "Neeeenja 🥷🏼",
     imagePos: { x: 0, y: -10 },
     imagePath: "img/neeeeenjas.jpg",
+    zIndex: 1,
   },
   {
     caption: "Beach Day",
     imagePos: { x: -15, y: -10 },
     imagePath: "/path/to/your/image2.jpg",
+    zIndex: 1,
+  },
+  {
+    caption: "Beach Day",
+    imagePos: { x: 5, y: -10 },
+    imagePath: "img/kat1.jpg",
+    zIndex: 1,
   },
   {
     caption: "Beach Day",
     imagePos: { x: -15, y: -10 },
     imagePath: "/path/to/your/image2.jpg",
+    zIndex: 1,
   },
   {
     caption: "Beach Day",
     imagePos: { x: -15, y: -10 },
     imagePath: "/path/to/your/image2.jpg",
+    zIndex: 1,
+  },
+  {
+    caption: "Beach Day",
+    imagePos: { x: -15, y: -10 },
+    imagePath: "/path/to/your/image2.jpg",
+    zIndex: 1,
+  },
+  {
+    caption: "Beach Day",
+    imagePos: { x: -15, y: -10 },
+    imagePath: "/path/to/your/image2.jpg",
+    zIndex: 1,
+  },
+  {
+    caption: "Beach Day",
+    imagePos: { x: -15, y: -10 },
+    imagePath: "/path/to/your/image2.jpg",
+    zIndex: 1,
+  },
+  {
+    caption: "Beach Day",
+    imagePos: { x: -15, y: -10 },
+    imagePath: "/path/to/your/image2.jpg",
+    zIndex: 1,
+  },
+  {
+    caption: "Beach Day",
+    imagePos: { x: -15, y: -10 },
+    imagePath: "/path/to/your/image2.jpg",
+    zIndex: 1,
+  },
+  {
+    caption: "Beach Day",
+    imagePos: { x: -15, y: -10 },
+    imagePath: "/path/to/your/image2.jpg",
+    zIndex: 1,
+  },
+  {
+    caption: "Beach Day",
+    imagePos: { x: -15, y: -10 },
+    imagePath: "/path/to/your/image2.jpg",
+    zIndex: 1,
   },
 ];
+
+const gallery = document.querySelector(".gallery");
+polaroids.forEach((data, index) => {
+  const polaroid = document.createElement("div");
+  polaroid.className = "polaroid";
+  polaroid.style.transform = `rotate(${
+    rotationAngles[index % rotationAngles.length]
+  }deg)`;
+
+  // Actually set the z-index
+  polaroid.style.zIndex = data.zIndex;
+
+  const imageContainer = document.createElement("div");
+  imageContainer.className = "image-container";
+
+  const img = document.createElement("img");
+  img.className = `img${index + 1}`;
+  img.src = data.imagePath || "/api/placeholder/400/320";
+  img.style.left = `${data.imagePos.x}%`;
+  img.style.top = `${data.imagePos.y}%`;
+
+  // Add click handler to open image modal
+  polaroid.addEventListener("click", () => openImageModal(index));
+
+  const caption = document.createElement("div");
+  caption.className = "caption";
+  caption.textContent = data.caption;
+
+  imageContainer.appendChild(img);
+  polaroid.appendChild(imageContainer);
+  polaroid.appendChild(caption);
+  gallery.appendChild(polaroid);
+});
 
 // Modal elements
 const modal = document.querySelector(".modal");
@@ -101,7 +193,9 @@ let isVideoModal = true;
 // Video sources
 const videos = [
   "vid/eimaan.mp4",
-  "/api/placeholder/400/320",
+  "vid/khadija.mp4",
+  "vid/kat.mp4",
+
   "/api/placeholder/400/320",
 ];
 
@@ -171,35 +265,6 @@ modal.addEventListener("click", (e) => {
   if (e.target === modal) {
     closeModal();
   }
-});
-const gallery = document.querySelector(".gallery");
-polaroids.forEach((data, index) => {
-  const polaroid = document.createElement("div");
-  polaroid.className = "polaroid";
-  polaroid.style.transform = `rotate(${
-    rotationAngles[index % rotationAngles.length]
-  }deg)`;
-
-  const imageContainer = document.createElement("div");
-  imageContainer.className = "image-container";
-
-  const img = document.createElement("img");
-  img.className = `img${index + 1}`; // Assign unique class name like img1, img2, etc.
-  img.src = data.imagePath || "/api/placeholder/400/320";
-  img.style.left = `${data.imagePos.x}%`;
-  img.style.top = `${data.imagePos.y}%`;
-
-  // Add click handler to open image modal
-  polaroid.addEventListener("click", () => openImageModal(index));
-
-  const caption = document.createElement("div");
-  caption.className = "caption";
-  caption.textContent = data.caption;
-
-  imageContainer.appendChild(img);
-  polaroid.appendChild(imageContainer);
-  polaroid.appendChild(caption);
-  gallery.appendChild(polaroid);
 });
 
 // Update play button click handler
