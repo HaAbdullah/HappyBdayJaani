@@ -216,17 +216,26 @@ const videos = [
   "vid/kat.mp4",
   "vid/anushka.mp4",
   "vid/ayat.mp4",
-
-  "/api/placeholder/400/320",
+  '<iframe width="560" height="315" src="https://www.youtube.com/embed/i3tVyz6zOjE?si=-980QdiwFCPGmQD2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+  '<iframe width="560" height="315" src="https://www.youtube.com/embed/W0rlMB7mNwM?si=FIGdOsDX1p0DKsWP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
 ];
 
-// Modal functions
 function openVideoModal() {
   isVideoModal = true;
   modal.style.display = "flex";
   videoContainer.style.display = "block";
   imageContainer.style.display = "none";
-  videoPlayer.src = videos[currentVideoIndex];
+  updateVideoContent();
+}
+
+function updateVideoContent() {
+  if (videos[currentVideoIndex].includes("iframe")) {
+    videoContainer.innerHTML = videos[currentVideoIndex];
+  } else {
+    videoContainer.innerHTML = `<video id="video-player" width="100%" controls>
+      <source src="${videos[currentVideoIndex]}" type="video/mp4">
+    </video>`;
+  }
 }
 
 function openImageModal(index) {
@@ -237,11 +246,8 @@ function openImageModal(index) {
   imageContainer.style.display = "block";
 
   const polaroidData = polaroids[currentPolaroidIndex];
-
-  // Create a new image to get natural dimensions
   const img = new Image();
   img.onload = function () {
-    // Update modal image
     modalImage.src = this.src;
     modalCaption.textContent = polaroidData.caption;
   };
@@ -251,15 +257,20 @@ function openImageModal(index) {
 function closeModal() {
   modal.style.display = "none";
   if (isVideoModal) {
-    videoPlayer.pause();
+    videoContainer.innerHTML = ""; // Clear video content completely
   }
 }
-
 // Navigation button event listeners
 document.querySelector(".prev-button").addEventListener("click", () => {
   if (isVideoModal) {
     currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
-    videoPlayer.src = videos[currentVideoIndex];
+    if (videos[currentVideoIndex].includes("iframe")) {
+      videoContainer.innerHTML = videos[currentVideoIndex];
+    } else {
+      videoContainer.innerHTML = `<video id="video-player" width="100%" controls>
+        <source src="${videos[currentVideoIndex]}" type="video/mp4">
+      </video>`;
+    }
   } else {
     currentPolaroidIndex =
       (currentPolaroidIndex - 1 + polaroids.length) % polaroids.length;
@@ -272,7 +283,13 @@ document.querySelector(".prev-button").addEventListener("click", () => {
 document.querySelector(".next-button").addEventListener("click", () => {
   if (isVideoModal) {
     currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-    videoPlayer.src = videos[currentVideoIndex];
+    if (videos[currentVideoIndex].includes("iframe")) {
+      videoContainer.innerHTML = videos[currentVideoIndex];
+    } else {
+      videoContainer.innerHTML = `<video id="video-player" width="100%" controls>
+        <source src="${videos[currentVideoIndex]}" type="video/mp4">
+      </video>`;
+    }
   } else {
     currentPolaroidIndex = (currentPolaroidIndex + 1) % polaroids.length;
     const polaroidData = polaroids[currentPolaroidIndex];
