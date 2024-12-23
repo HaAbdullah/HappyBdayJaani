@@ -260,17 +260,28 @@ body {
   color: white;
   z-index: 10;
 }
-
+.img2 {
+  height: 100% !important;
+  width: 100% !important;
+}
 .caption6 {
   font-size: 20px !important;
+}
+.caption7 {
+  font-size: 15px !important;
 }
 .img12 {
   height: 150% !important;
 }
+.img9 {
+  height: 100% !important;
+}
 .img10 {
   width: 500%;
 }
-
+.caption11 {
+  font-size: 15px !important;
+}
 .caption12 {
   font-size: 13px !important;
 }

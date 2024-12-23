@@ -21,7 +21,7 @@ for (let i = 0; i < 50; i++) {
 
 // Rotation angles for main polaroids
 const rotationAngles = [
-  5, -3, 7, -5, 4, -6, 3, -4, 6, -2, 5, -7, 4, -3, 4, -5, -7, 4, -3, 3,
+  5, -3, 7, -5, 4, -6, 3, -4, 6, -2, 5, -7, 4, -3, 4, -5, 3, 4, -3, 3,
 ];
 
 // Polaroid data
@@ -33,9 +33,9 @@ const polaroids = [
     zIndex: 1,
   },
   {
-    caption: "HAPPY BIRTHDAY ABEER",
-    imagePos: { x: 0, y: 37 },
-    imagePath: "img/ananya.jpg",
+    caption: "Our Earliest Photo",
+    imagePos: { x: 0, y: 0 },
+    imagePath: "img/group2.jpg",
     zIndex: 1,
   },
   // {
@@ -47,13 +47,13 @@ const polaroids = [
   // },
   {
     caption: "Happy Birthday",
-    imagePos: { x: -15, y: -10 },
-    imagePath: "",
+    imagePos: { x: 0, y: 0 },
+    imagePath: "img/group3.jpg",
     zIndex: 1,
   },
   {
     caption: "WE LOVE YOU SO MUCH",
-    imagePos: { x: -15, y: -10 },
+    imagePos: { x: 0, y: 10 },
     imagePath: "img/anushka4.jpg",
     zIndex: 1,
   },
@@ -70,8 +70,9 @@ const polaroids = [
     zIndex: 4,
   },
   {
-    caption: "Happy Birthday",
-    imagePos: { x: 0, y: -10 },
+    caption:
+      "U were my sunshine every day in high school, thank you for always being here for me. I love you abeer ❤️”",
+    imagePos: { x: 0, y: 0 },
     imagePath: "img/eimaan2.jpg",
     zIndex: 4,
   },
@@ -83,7 +84,7 @@ const polaroids = [
   },
   {
     caption: "HAPPY BIRTHDAY ABEER",
-    imagePos: { x: 5, y: 20 },
+    imagePos: { x: 5, y: 5 },
     imagePath: "img/ananya.jpg",
   },
   // {
@@ -101,7 +102,7 @@ const polaroids = [
   {
     caption:
       "Happy 19th queen, i hope you have a great birthday and get to enjoy many more happily!!",
-    imagePos: { x: 5, y: -10 },
+    imagePos: { x: 5, y: 10 },
     imagePath: "img/ayat.jpg",
     zIndex: 3,
   },
@@ -139,15 +140,15 @@ const polaroids = [
     zIndex: 5,
   },
   {
-    caption: "Beach Day",
-    imagePos: { x: -15, y: -10 },
-    imagePath: "/path/to/your/image2.jpg",
+    caption: "<3",
+    imagePos: { x: 0, y: 0 },
+    imagePath: "img/grad.jpg",
     zIndex: 1,
   },
   {
-    caption: "Beach Day",
-    imagePos: { x: -15, y: -10 },
-    imagePath: "/path/to/your/image2.jpg",
+    caption: "Iconic",
+    imagePos: { x: 0, y: 0 },
+    imagePath: "img/us.jpg",
     zIndex: 1,
   },
   {
