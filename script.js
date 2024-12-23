@@ -99,9 +99,10 @@ const polaroids = [
     zIndex: 4,
   },
   {
-    caption: "FUN FUN TIMES",
+    caption:
+      "Happy 19th queen, i hope you have a great birthday and get to enjoy many more happily!!",
     imagePos: { x: 5, y: -10 },
-    imagePath: "img/kat1.jpg",
+    imagePath: "img/ayat.jpg",
     zIndex: 3,
   },
   {
@@ -214,6 +215,7 @@ const videos = [
   "vid/khadija.mp4",
   "vid/kat.mp4",
   "vid/anushka.mp4",
+  "vid/ayat.mp4",
 
   "/api/placeholder/400/320",
 ];
