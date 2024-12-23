@@ -272,7 +272,7 @@ body {
   font-size: 15px !important;
 }
 .img12 {
-  height: 150% !important;
+  height: 100% !important;
 }
 .img9 {
   height: 100% !important;
@@ -299,8 +299,14 @@ body {
 .caption16 {
   font-size: 8px !important;
 }
+.img17 {
+  height: 150% !important;
+}
 .img19 {
   width: 500%;
+}
+.img20 {
+  height: 120% !important;
 }
 @media screen and (max-width: 1180px) {
   .title {

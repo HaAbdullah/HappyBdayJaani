@@ -1,3 +1,11 @@
+const audio = new Audio("bday.wav");
+
+document.addEventListener("click", function initAudio() {
+  audio.play().catch((e) => console.log("Audio play failed:", e));
+  // Remove the event listener after first click
+  document.removeEventListener("click", initAudio);
+});
+
 // Utility function for generating random pastel colors
 function getRandomPastelColor() {
   const hue = Math.floor(Math.random() * 360);
@@ -67,7 +75,7 @@ const polaroids = [
     caption: "Happy Birthday Meri Jaan",
     imagePos: { x: 0, y: 0 },
     imagePath: "img/jaanunjaani.jpg",
-    zIndex: 4,
+    zIndex: 7,
   },
   {
     caption:
@@ -104,14 +112,13 @@ const polaroids = [
       "Happy 19th queen, i hope you have a great birthday and get to enjoy many more happily!!",
     imagePos: { x: 5, y: 10 },
     imagePath: "img/ayat.jpg",
-    zIndex: 3,
+    zIndex: 5,
   },
   {
-    caption:
-      "Through our Covid times in high school. We broke so many rules, but you are worth breaking each rule",
-    imagePos: { x: 0, y: -50 },
-    imagePath: "img/anushka3.jpg",
-    zIndex: 3,
+    caption: "<3",
+    imagePos: { x: 0, y: 17 },
+    imagePath: "img/grad.jpg",
+    zIndex: 1,
   },
   {
     caption:
@@ -137,13 +144,13 @@ const polaroids = [
       "You were my true partner in computer engineering and comp sci class, Mr.Knowles knew that we were trouble to the tech world- maybe still are. I love this picture and I miss you sooo much, I wish we got to be together again",
     imagePos: { x: 0, y: 0 },
     imagePath: "img/anushka1.jpg",
-    zIndex: 5,
+    zIndex: 1,
   },
   {
-    caption: "<3",
-    imagePos: { x: 0, y: 0 },
-    imagePath: "img/grad.jpg",
-    zIndex: 1,
+    caption: "Happy birthdayy",
+    imagePos: { x: 0, y: -30 },
+    imagePath: "img/amina.jpg",
+    zIndex: 3,
   },
   {
     caption: "Iconic",
@@ -158,10 +165,11 @@ const polaroids = [
     zIndex: 1,
   },
   {
-    caption: "",
-    imagePos: { x: 0, y: 0 },
-    imagePath: "img/anushka2.jpg",
-    zIndex: 1,
+    caption:
+      "Through our Covid times in high school. We broke so many rules, but you are worth breaking each rule",
+    imagePos: { x: 0, y: -10 },
+    imagePath: "img/anushka3.jpg",
+    zIndex: 3,
   },
 ];
 const gallery = document.querySelector(".gallery");
@@ -217,12 +225,14 @@ const videos = [
   "vid/kat.mp4",
   "vid/anushka.mp4",
   "vid/ayat.mp4",
+  "vid/amina.mp4",
   "vid/annie.mp4",
   '<iframe width="560" height="315" src="https://www.youtube.com/embed/i3tVyz6zOjE?si=-980QdiwFCPGmQD2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
   '<iframe width="560" height="315" src="https://www.youtube.com/embed/W0rlMB7mNwM?si=FIGdOsDX1p0DKsWP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
 ];
 
 function openVideoModal() {
+  audio.pause();
   isVideoModal = true;
   modal.style.display = "flex";
   videoContainer.style.display = "block";
@@ -421,10 +431,3 @@ canvas.height = H;
 const startTime = Date.now();
 
 Draw();
-const audio = new Audio("bday.wav");
-
-document.addEventListener("click", function initAudio() {
-  audio.play().catch((e) => console.log("Audio play failed:", e));
-  // Remove the event listener after first click
-  document.removeEventListener("click", initAudio);
-});
